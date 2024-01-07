@@ -1,1 +1,1 @@
-[![CircleCI](https://img.shields.io/circleci/build/gh/KusAndiPriyono/JetNewsApp)](https://img.shields.io/circleci/build/gh/KusAndiPriyono/JetNewsApp)
+[![KusAndiPriyono](https://circleci.com/gh/KusAndiPriyono/JetNewsApp.svg?style=svg)](https://circleci.com/gh/KusAndiPriyono/JetNewsApp)
