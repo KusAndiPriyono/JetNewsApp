@@ -7,6 +7,7 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.preferencesDataStore
+import com.bangkit.jetnewsapp.preferences.domain.LocalUserManager
 import com.bangkit.jetnewsapp.preferences.utils.Constants
 import com.bangkit.jetnewsapp.preferences.utils.Constants.USER_SETTINGS
 import kotlinx.coroutines.flow.Flow
@@ -15,7 +16,7 @@ import javax.inject.Inject
 
 class LocalUserManagerImpl @Inject constructor(
     private val application: Application
-) : com.bangkit.jetnewsapp.preferences.domain.LocalUserManager {
+) : LocalUserManager {
     override suspend fun saveAppEntry() {
         application.dataStore.edit { settings ->
             settings[PreferencesKeys.APP_ENTRY] = true

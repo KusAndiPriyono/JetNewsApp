@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import com.bangkit.jetnewsapp.designsystem.ui.theme.BlueGray
 import com.bangkit.jetnewsapp.designsystem.util.Dimens
 
 @Composable
@@ -19,7 +20,7 @@ fun PageIndicator(
     pageSize: Int,
     selectedPage: Int,
     selectedColor: Color = MaterialTheme.colorScheme.primary,
-    unselectedColor: Color = com.bangkit.jetnewsapp.designsystem.ui.theme.BlueGray
+    unselectedColor: Color = BlueGray
 ) {
     Row(modifier = modifier, horizontalArrangement = Arrangement.SpaceBetween) {
         repeat(times = pageSize) { page ->

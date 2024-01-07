@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(private val readAppEntry: com.bangkit.jetnewsapp.preferences.domain.usecase.ReadAppEntry) : ViewModel() {
+class MainViewModel @Inject constructor(private val readAppEntry: ReadAppEntry) : ViewModel() {
 
     private val _splashCondition = mutableStateOf(true)
     val splashCondition: State<Boolean> = _splashCondition

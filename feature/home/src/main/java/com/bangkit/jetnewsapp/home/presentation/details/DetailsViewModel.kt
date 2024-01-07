@@ -6,19 +6,19 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bangkit.jetnewsapp.database.model.Article
+import com.bangkit.jetnewsapp.designsystem.util.UIComponent
 import com.bangkit.jetnewsapp.home.domain.usecases.news.DeleteArticle
 import com.bangkit.jetnewsapp.home.domain.usecases.news.GetSaveArticle
 import com.bangkit.jetnewsapp.home.domain.usecases.news.InsertArticle
-import com.bangkit.jetnewsapp.designsystem.util.UIComponent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class DetailsViewModel @Inject constructor(
-    private val getSavedArticleUseCase: com.bangkit.jetnewsapp.home.domain.usecases.news.GetSaveArticle,
-    private val deleteArticleUseCase: com.bangkit.jetnewsapp.home.domain.usecases.news.DeleteArticle,
-    private val insertArticleUseCase: com.bangkit.jetnewsapp.home.domain.usecases.news.InsertArticle,
+    private val getSavedArticleUseCase: GetSaveArticle,
+    private val deleteArticleUseCase: DeleteArticle,
+    private val insertArticleUseCase: InsertArticle,
 ) : ViewModel() {
     var sideEffect by mutableStateOf<UIComponent?>(null)
         private set

@@ -32,6 +32,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.bangkit.jetnewsapp.database.model.Article
 import com.bangkit.jetnewsapp.database.model.Source
+import com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme
 import com.bangkit.jetnewsapp.designsystem.util.DateFormatter
 
 @Composable
@@ -97,7 +98,7 @@ fun ArticleCard(
 @Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun ArticleCardPreview() {
-    com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme(dynamicColor = false) {
+    JetNewsAppTheme(dynamicColor = false) {
         ArticleCard(
             article = Article(
                 author = "",

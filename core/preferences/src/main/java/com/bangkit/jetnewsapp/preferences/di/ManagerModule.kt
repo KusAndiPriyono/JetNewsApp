@@ -14,5 +14,5 @@ abstract class ManagerModule {
 
     @Binds
     @Singleton
-    abstract fun bindLocalUserManger(localUserManagerImpl: com.bangkit.jetnewsapp.preferences.data.LocalUserManagerImpl): com.bangkit.jetnewsapp.preferences.domain.LocalUserManager
+    abstract fun bindLocalUserManger(localUserManagerImpl: LocalUserManagerImpl): LocalUserManager
 }

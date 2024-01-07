@@ -26,6 +26,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.bangkit.jetnewsapp.designsystem.R
+import com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme
 
 fun Modifier.shimmerEffect() = composed {
     val transition = rememberInfiniteTransition(label = "")
@@ -94,7 +95,7 @@ fun ArticleCardShimmerEffect(
 @Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun ArticleCardShimmerEffectPreview() {
-    com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme {
+    JetNewsAppTheme {
         ArticleCardShimmerEffect()
     }
 }

@@ -15,6 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -40,11 +41,11 @@ fun EmptyScreen(
     }
 
     var icon by remember {
-        mutableStateOf(com.bangkit.jetnewsapp.designsystem.R.drawable.ic_network_error)
+        mutableIntStateOf(R.drawable.ic_network_error)
     }
     if (error == null) {
         message = "No Data Found"
-        icon = com.bangkit.jetnewsapp.designsystem.R.drawable.ic_search_document
+        icon = R.drawable.ic_search_document
     }
 
     var startAnimation by remember {

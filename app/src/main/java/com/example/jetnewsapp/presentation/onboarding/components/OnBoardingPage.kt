@@ -17,6 +17,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme
 import com.example.jetnewsapp.R
 import com.bangkit.jetnewsapp.designsystem.util.Dimens
 import com.example.jetnewsapp.presentation.onboarding.Page
@@ -56,7 +57,7 @@ fun OnBoardingPage(
 @Preview(uiMode = UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
 fun OnBoardingPagePreview() {
-    com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme {
+    JetNewsAppTheme {
         OnBoardingPage(page = onboardPages[0])
     }
 }

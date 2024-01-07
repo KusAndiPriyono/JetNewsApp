@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class OnBoardingViewModel @Inject constructor(
-    private val saveAppEntry: com.bangkit.jetnewsapp.preferences.domain.usecase.SaveAppEntry
+    private val saveAppEntry: SaveAppEntry
 ) : ViewModel() {
     fun onEvent(event: OnBoardingEvent) {
         when (event) {

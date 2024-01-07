@@ -12,6 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -57,7 +58,7 @@ fun DetailsTopBar(
 @Preview(showBackground = true)
 @Composable
 fun DetailsTopBarPreview() {
-    com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme(dynamicColor = false) {
+    JetNewsAppTheme(dynamicColor = false) {
         DetailsTopBar(
             onBrowsingClick = {},
             onBookMarkClick = {},

@@ -38,6 +38,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.bangkit.jetnewsapp.database.model.Article
 import com.bangkit.jetnewsapp.database.model.Source
+import com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme
 import com.bangkit.jetnewsapp.designsystem.util.UIComponent
 import com.bangkit.jetnewsapp.home.presentation.components.DetailsTopBar
 
@@ -152,7 +153,7 @@ fun DetailsScreen(
 @Preview(showBackground = true)
 @Composable
 fun DetailsScreenPreview() {
-    com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme(dynamicColor = false) {
+    JetNewsAppTheme(dynamicColor = false) {
         DetailsScreen(
             article = Article(
                 author = "Author",

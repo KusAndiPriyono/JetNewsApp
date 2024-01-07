@@ -5,6 +5,8 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.bangkit.jetnewsapp.database.dao.NewsDao
 import com.bangkit.jetnewsapp.database.model.Article
+import com.bangkit.jetnewsapp.home.data.remote.NewsPagingSource
+import com.bangkit.jetnewsapp.home.data.remote.SearchNewsPagingSource
 import com.bangkit.jetnewsapp.home.domain.repository.NewsRepository
 import com.bangkit.jetnewsapp.network.NewsApi
 import kotlinx.coroutines.flow.Flow
@@ -18,7 +20,7 @@ class NewsRepositoryImpl @Inject constructor(
         return Pager(
             config = PagingConfig(pageSize = 10),
             pagingSourceFactory = {
-                com.bangkit.jetnewsapp.home.data.remote.NewsPagingSource(
+                NewsPagingSource(
                     newsApi = newsApi,
                     sources = sources.joinToString(separator = ",")
                 )
@@ -30,7 +32,7 @@ class NewsRepositoryImpl @Inject constructor(
         return Pager(
             config = PagingConfig(pageSize = 10),
             pagingSourceFactory = {
-                com.bangkit.jetnewsapp.home.data.remote.SearchNewsPagingSource(
+                SearchNewsPagingSource(
                     api = newsApi,
                     searchQuery = searchQuery,
                     sources = sources.joinToString(separator = ",")

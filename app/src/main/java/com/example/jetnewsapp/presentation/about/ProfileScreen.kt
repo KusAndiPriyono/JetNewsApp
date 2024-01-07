@@ -27,8 +27,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetnewsapp.R
+import com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme
 import com.bangkit.jetnewsapp.designsystem.util.Dimens
+import com.example.jetnewsapp.R
 
 @Composable
 fun ProfileScreen() {
@@ -92,7 +93,7 @@ fun ProfileScreen() {
 @Preview(showBackground = true)
 @Composable
 fun ProfileScreenPreview() {
-    com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme {
+    JetNewsAppTheme {
         ProfileScreen()
     }
 }

@@ -27,6 +27,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.bangkit.jetnewsapp.designsystem.R
+import com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme
 import com.bangkit.jetnewsapp.designsystem.util.Dimens
 
 @Composable
@@ -58,7 +59,7 @@ fun SearchBar(
             readOnly = readOnly,
             leadingIcon = {
                 Icon(
-                    painter = painterResource(id = com.bangkit.jetnewsapp.designsystem.R.drawable.ic_search),
+                    painter = painterResource(id = R.drawable.ic_search),
                     contentDescription = null,
                     modifier = Modifier.size(Dimens.IconSize),
                     tint = colorResource(id = R.color.text_medium)
@@ -113,7 +114,7 @@ fun Modifier.searchBar() = composed {
 @Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun SearchBarPreview() {
-    com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme {
+    JetNewsAppTheme {
         SearchBar(text = "", readOnly = false, onValueChange = {}) {
 
         }

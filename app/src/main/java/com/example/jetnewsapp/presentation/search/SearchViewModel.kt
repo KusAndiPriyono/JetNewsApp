@@ -5,12 +5,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
+import com.bangkit.jetnewsapp.home.domain.usecases.news.SearchNews
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class SearchViewModel @Inject constructor(
-    private val searchNewsUseCase: com.bangkit.jetnewsapp.home.domain.usecases.news.SearchNews
+    private val searchNewsUseCase: SearchNews
 ) : ViewModel() {
     private val _state = mutableStateOf(SearchState())
     val state: State<SearchState> = _state
