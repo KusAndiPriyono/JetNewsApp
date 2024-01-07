@@ -1,1 +1,1 @@
-[![KusAndiPriyono](https://circleci.com/gh/KusAndiPriyono/JetNewsApp.svg?style=svg)](https://circleci.com/gh/KusAndiPriyono/JetNewsApp)
+[![cci-uuwmi](https://circleci.com/gh/cci-uuwmi/JetNewsApp1.svg?style=svg)](https://circleci.com/gh/cci-uuwmi/JetNewsApp1)
