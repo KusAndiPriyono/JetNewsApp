@@ -34,7 +34,7 @@ import com.example.jetnewsapp.R
 @Composable
 fun ProfileScreen() {
     val profileName by remember {
-        mutableStateOf("Kus Andi Priyono")
+        mutableStateOf("Andi")
     }
     val profileEmail by remember {
         mutableStateOf("andipriyono94@gmail.com")

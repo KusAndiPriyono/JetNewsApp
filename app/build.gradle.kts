@@ -70,5 +70,7 @@ dependencies {
     implementation(project(Modules.featureBookmark))
 
     implementation(libs.core)
+
+    debugImplementation(libs.leakcanary.android)
 }
 
