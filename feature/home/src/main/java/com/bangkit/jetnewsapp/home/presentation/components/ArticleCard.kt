@@ -78,7 +78,7 @@ fun ArticleCard(
                     modifier = Modifier.size(16.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                     Text(
                         text = DateFormatter.formatDate(
                             currentDateString = article.publishedAt,

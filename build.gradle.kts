@@ -7,5 +7,6 @@ plugins {
     alias(libs.plugins.kapt) apply false
     alias(libs.plugins.parcelize) apply false
     alias(libs.plugins.androidDynamicFeature) apply false
+    alias(libs.plugins.ksp) apply false
 }
 

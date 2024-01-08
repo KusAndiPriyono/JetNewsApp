@@ -2,9 +2,9 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.android.kotlin)
-    alias(libs.plugins.kapt)
     alias(libs.plugins.parcelize)
     alias(libs.plugins.hilt.android)
+    alias(libs.plugins.ksp)
 }
 
 apply {
@@ -46,7 +46,7 @@ android {
         jvmTarget = AndroidConfig.jvmTarget
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
     buildFeatures {
         compose = true
@@ -69,7 +69,7 @@ dependencies {
 
     //Room
     implementation(libs.androidx.room.runtime)
-    kapt(libs.androidx.room.compiler)
+    ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
 
     implementation(libs.android.database.sqlcipher)

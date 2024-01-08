@@ -2,9 +2,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.android.kotlin)
-    alias(libs.plugins.kapt)
     alias(libs.plugins.parcelize)
     alias(libs.plugins.hilt.android)
+    alias(libs.plugins.ksp)
 }
 
 apply {
@@ -55,7 +55,7 @@ android {
         buildConfig = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
     packaging {
         resources {

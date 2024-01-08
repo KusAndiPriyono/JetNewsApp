@@ -1,5 +1,6 @@
 package com.bangkit.jetnewsapp.designsystem.common
 
+import android.annotation.SuppressLint
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -28,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import com.bangkit.jetnewsapp.designsystem.R
 import com.bangkit.jetnewsapp.designsystem.ui.theme.JetNewsAppTheme
 
+@SuppressLint("ModifierFactoryUnreferencedReceiver")
 fun Modifier.shimmerEffect() = composed {
     val transition = rememberInfiniteTransition(label = "")
     val alpha = transition.animateFloat(
