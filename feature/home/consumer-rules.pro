@@ -1,0 +1,1 @@
+-keep class com.bangkit.jetnewsapp.home.data.remote.NewsPagingSource { *; }

@@ -30,15 +30,13 @@ class MainActivity : ComponentActivity() {
         installSplashScreen().apply {
             setKeepOnScreenCondition(condition = { viewModel.splashCondition.value })
         }
-
         setContent {
             JetNewsAppTheme(dynamicColor = false) {
                 val isSystemInDarkMode = isSystemInDarkTheme()
                 val systemController = rememberSystemUiController()
                 SideEffect {
                     systemController.setSystemBarsColor(
-                        color = Color.Transparent,
-                        darkIcons = !isSystemInDarkMode
+                        color = Color.Transparent, darkIcons = !isSystemInDarkMode
                     )
                 }
                 Box(
